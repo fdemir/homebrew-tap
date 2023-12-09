@@ -5,21 +5,21 @@
 class Havlu < Formula
   desc "Havlu lets you focus on the frontend by making it effortless to have a custom API."
   homepage ""
-  version "0.1.9"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fdemir/havlu/releases/download/v0.1.9/havlu_Darwin_arm64.tar.gz"
-      sha256 "6a93b727460b50dc7e48ba07ec2bc3840afde826477d48a049a1e3004057fd93"
+      url "https://github.com/fdemir/havlu/releases/download/v0.2.0/havlu_Darwin_arm64.tar.gz"
+      sha256 "c9971d49a5e0c557e4b376b2757a8acc87c9deeaae812b75460f4dd0ff701e40"
 
       def install
         bin.install "havlu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fdemir/havlu/releases/download/v0.1.9/havlu_Darwin_x86_64.tar.gz"
-      sha256 "09eca8527f79866eb6930e8d589e8f693c12a189c06aaa17a93ee28765150ec9"
+      url "https://github.com/fdemir/havlu/releases/download/v0.2.0/havlu_Darwin_x86_64.tar.gz"
+      sha256 "9f1d2241f0f10c9f21cc83d5d4c8ac60f5de96403a1e1898487abe32986c7d3f"
 
       def install
         bin.install "havlu"
@@ -29,16 +29,16 @@ class Havlu < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fdemir/havlu/releases/download/v0.1.9/havlu_Linux_arm64.tar.gz"
-      sha256 "edc24c48317f49ea601e1313ad88aa803935e4a1ee5c7070c4730a69a232ed18"
+      url "https://github.com/fdemir/havlu/releases/download/v0.2.0/havlu_Linux_arm64.tar.gz"
+      sha256 "89e80e0cae5e46a5cb86b5a240af1dde53e90d1583a8ad3ae650aa52545d7997"
 
       def install
         bin.install "havlu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fdemir/havlu/releases/download/v0.1.9/havlu_Linux_x86_64.tar.gz"
-      sha256 "11a88a678ed99a0645b17777bc6b9db861bf305e42ec1640202d251d64d25576"
+      url "https://github.com/fdemir/havlu/releases/download/v0.2.0/havlu_Linux_x86_64.tar.gz"
+      sha256 "219c0f4f293a2ef687512d15549c2bae93d98ba2c76c84f2371fee64ed9e8db7"
 
       def install
         bin.install "havlu"
