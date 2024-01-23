@@ -5,21 +5,21 @@
 class Havlu < Formula
   desc "Havlu lets you focus on the frontend by making it effortless to have a custom API."
   homepage ""
-  version "0.3.0"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fdemir/havlu/releases/download/v0.3.0/havlu_Darwin_arm64.tar.gz"
-      sha256 "fce5ea13fdb72a07ec76cc7bf9f83e08659a8eaad0d31196f95ad35dad7afc27"
+      url "https://github.com/fdemir/havlu/releases/download/v0.3.2/havlu_Darwin_arm64.tar.gz"
+      sha256 "7f652bf7cbb5db75307cc690f4cd496322b2e56fbf5a1dd7ff073f6210ef554b"
 
       def install
         bin.install "havlu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fdemir/havlu/releases/download/v0.3.0/havlu_Darwin_x86_64.tar.gz"
-      sha256 "552eef3acc390c6e6bf10065653ae8f1c54d850b419536ce70e60d5ec06e93e8"
+      url "https://github.com/fdemir/havlu/releases/download/v0.3.2/havlu_Darwin_x86_64.tar.gz"
+      sha256 "3a2b1a936781a33458b38b510d05536e182840dc5dbaaa769229a28f969a3527"
 
       def install
         bin.install "havlu"
@@ -28,17 +28,17 @@ class Havlu < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fdemir/havlu/releases/download/v0.3.0/havlu_Linux_x86_64.tar.gz"
-      sha256 "f8790ec1a7defe841885e7fa153fa4f0b2c568094050e64eb9fba6b18bb3bb78"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fdemir/havlu/releases/download/v0.3.2/havlu_Linux_arm64.tar.gz"
+      sha256 "eb06848eb2540022d83903e644d40f4b8d838144a8b898e7bb57f34bc3005e84"
 
       def install
         bin.install "havlu"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fdemir/havlu/releases/download/v0.3.0/havlu_Linux_arm64.tar.gz"
-      sha256 "3c2f739bfde367d598ac32aca818cca1a45244801d88509e84b6d707e3bc4831"
+    if Hardware::CPU.intel?
+      url "https://github.com/fdemir/havlu/releases/download/v0.3.2/havlu_Linux_x86_64.tar.gz"
+      sha256 "1191b916a08c996fa21aed8dd189be7f69e0a4fef78922cf8b639bd7595a3923"
 
       def install
         bin.install "havlu"
